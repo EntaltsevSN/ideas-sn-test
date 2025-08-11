@@ -8,11 +8,11 @@ import type { ICardProps } from './types'
 
 function App() {
   const initialCards: ICardProps[] = [
-    {id: 1, image: null, text: 'Просто с кем-то поговорить', ideas: 1, unread: false, type: 'left-right'},
-    {id: 2, image: 'https://placehold.jp/200x200.png', text: '}{очу в это классное место в хорошей компании', ideas: 10, unread: true, type: 'left-right'},
-    {id: 3, image: 'https://placehold.jp/200x200.png', text: 'Вот тут я бы хотел погрузиться в энергию мира и насладиться покоем', ideas: 1, unread: false, type: 'right-left'},
-    {id: 3, image: 'https://placehold.jp/400x300.png', text: 'Прекрасное место, чтобы погрузиться в творческие мысли, поймать дзен, сказать миру вокруг себя добрые слова', ideas: 1, unread: false, type: 'top-down'},
-    {id: 4, image: 'https://placehold.jp/400x300.png', text: 'Прекрасное место, чтобы погрузиться в творческие мысли, поймать дзен, сказать миру вокруг себя добрые слова', ideas: 1, unread: false, type: 'down-top'},
+    {id: 1, image: null, text: 'Lorem ipsum dolor sit amet consectetur.', ideas: 1, unread: false, type: 'left-right'},
+    {id: 2, image: 'https://placehold.jp/200x200.png', text: 'Lorem ipsum dolor sit amet consectetur.', ideas: 10, unread: true, type: 'left-right'},
+    {id: 3, image: 'https://placehold.jp/200x200.png', text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', ideas: 1, unread: false, type: 'right-left'},
+    {id: 3, image: 'https://placehold.jp/400x300.png', text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.', ideas: 1, unread: false, type: 'top-down'},
+    {id: 4, image: 'https://placehold.jp/400x300.png', text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.', ideas: 1, unread: false, type: 'down-top'},
   ]
 
   const [cards, setCards] = useState<ICardProps[]>(

@@ -6,11 +6,14 @@ function Form({ cards, setCards }: IFormProps) {
 
   function getRandomCard(text: string) {
     const random = Math.random()
+    let newId: number = 0;
 
-    console.log(random)
+    if (cards.length) {
+      newId = cards.at(-1)!.id
+    }
 
     const newCard: ICardProps = {
-      id: cards[cards.length-1].id + 1, 
+      id: newId + 1, 
       image: random > .5 ? 'https://placehold.jp/200x200.png' : null,
       text,
       ideas: random > .4 ? Math.ceil(random * 100) : null,
