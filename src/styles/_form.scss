@@ -1,0 +1,26 @@
+.form {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 16px;
+  align-items: stretch;
+  
+  &__input,
+  &__textarea {
+    border: 1px solid #ddd;
+    padding: 8px 16px;
+    border-radius: 8px;
+    flex-grow: 1;
+
+    &:focus {
+      outline: 0;
+      border-color: #bbb;
+    }
+  }
+
+  &__button {
+    border: 0;
+    outline: 0;
+    padding: 8px 16px;
+    border-radius: 8px;
+  }
+}
