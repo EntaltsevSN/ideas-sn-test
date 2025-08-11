@@ -15,10 +15,10 @@ function App() {
     {id: 4, image: 'https://placehold.jp/400x300.png', text: 'Прекрасное место, чтобы погрузиться в творческие мысли, поймать дзен, сказать миру вокруг себя добрые слова', ideas: 1, unread: false, type: 'down-top'},
   ]
 
-  const [cards, setCards] = useState(
+  const [cards, setCards] = useState<ICardProps[]>(
     localStorage.getItem('cards') === null
       ? initialCards
-      : localStorage.getItem('cards')
+      : JSON.parse(localStorage.getItem('cards') as string)
   )
 
   return (

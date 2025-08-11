@@ -9,7 +9,11 @@ export type ICardProps = {
   unread?: boolean
 }
 
+type Setter<T> = Dispatch<SetStateAction<T>>;
+
 export type ITestPartProps = {
   cards: ICardProps[],
-  setCards: Dispatch<SetStateAction<ICardProps>>
+  setCards: Setter<ICardProps>
 }
+
+export type IFormProps = ITestPartProps
