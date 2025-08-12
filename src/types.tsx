@@ -1,12 +1,11 @@
-import type { Dispatch, SetStateAction } from "react"
+import type { Dispatch, ReactElement, SetStateAction, SVGProps } from "react"
 
 export type ICardProps = {
   id: number,
   image?: string | null,
   text?: string,
-  ideas?: number | null,
-  type?: string,
-  unread?: boolean
+  ideas?: string,
+  type?: string
 }
 
 type Setter<T> = Dispatch<SetStateAction<T>>;
@@ -17,3 +16,14 @@ export type ITestPartProps = {
 }
 
 export type IFormProps = ITestPartProps
+
+export type ICardType = {
+  id: string,
+  icon: ReactElement<SVGProps<SVGSVGElement>>
+}
+
+export type IResizableTextareaProps = {
+  className?: string;
+  value: string;
+  onChange: (value: string) => void;
+}

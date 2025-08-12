@@ -1,5 +1,5 @@
 import Button from "../components/Button";
-import Card from "../components/Card";
+import Card1 from "../components/Card1";
 import Form from "../components/Form";
 import Layout from "../components/Layout";
 import type { ITestPartProps } from "../types";
@@ -13,7 +13,7 @@ function TestPart1({cards, setCards}: ITestPartProps) {
       <p>Метрика количества идей видна, если их 1 или больше. Если есть непрочитанные идеи, метрика окрашивается в синие цвета. Если выбран вариант снизу-вверх, а метрики прочитаны, они обретают особый стиль, чтобы быть видимыми поверх изображений. Метрика не пересекается с текстом, но старается быть с последней строкой на одном уровне.</p>
       <p>Кнопка параметров карточки пока имеет ознакомительный характер. Если выбран вариант сверху-вниз, как и метрика, у нее есть стиль, чтобы быть видимой поверх изображений.</p>
       <Form {...{cards, setCards}} />
-      { cards.map((card) => <Card {...card} />) }
+      { cards.map((card) => <Card1 {...card} />) }
     </Layout>
   )
 }

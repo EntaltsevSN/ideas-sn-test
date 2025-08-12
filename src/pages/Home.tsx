@@ -4,7 +4,7 @@ import Button from "../components/Button";
 function Home() {
   const parts = [
     {id: 1, label: 'Тестовое. Часть 1', isActive: true},
-    {id: 2, label: 'Тестовое. Часть 2', isActive: false},
+    {id: 2, label: 'Тестовое. Часть 2', isActive: true},
     {id: 3, label: 'Тестовое. Часть 3', isActive: false},
   ]
     

@@ -16,8 +16,7 @@ function Form({ cards, setCards }: IFormProps) {
       id: newId + 1, 
       image: random > .5 ? 'https://placehold.jp/200x200.png' : null,
       text,
-      ideas: random > .4 ? Math.ceil(random * 100) : null,
-      unread: random > .5,
+      ideas: random > .4 ? 'Math.ceil(random * 100)' : '0',
       type: random > .5 ? 'left-right' : 'right-left'
     }
 

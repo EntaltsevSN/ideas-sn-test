@@ -1,11 +1,9 @@
 import { useLayoutEffect, useRef, useState, type ChangeEvent, type JSX } from "react"
 import type { ICardProps } from "../types";
 
-
-
-function Card({ image = null, text = '', ideas = 0, unread = false, type = 'left-right' }: ICardProps): JSX.Element {
-  const [cardText, setCardText] = useState(text)
-  const [cardIdeas, setCardIdeas] = useState(ideas) 
+function Card1({ image = null, text = '', ideas = '0', type = 'left-right' }: ICardProps): JSX.Element {
+  const [cardText, setCardText] = useState<string>(text)
+  const [cardIdeas, setCardIdeas] = useState<string>(ideas) 
   const ideasRef = useRef<HTMLDivElement>(null);
   const pushRef = useRef<HTMLDivElement>(null); 
   
@@ -26,9 +24,14 @@ function Card({ image = null, text = '', ideas = 0, unread = false, type = 'left
         <div className="card__body">
           <div className="card__options" onClick={() => optionsClick()}>•••</div>
           {ideas && <div 
-            className={['card__ideas', unread ? 'card__ideas--unread' : ''].join(' ')}
+            className={
+              [
+                'card__ideas',  
+                cardIdeas.includes('+') ? 'card__ideas--unread' : ''
+              ].join(' ')
+            }
             ref={ideasRef}
-          >{unread && '+'}{cardIdeas}</div>}
+          >{cardIdeas}</div>}
           {
             image && <figure className="card__image">
               <img src={image} />
@@ -51,7 +54,7 @@ function Card({ image = null, text = '', ideas = 0, unread = false, type = 'left
           <input
             type="number" 
             value={String(cardIdeas)}
-            onChange={(e: ChangeEvent<HTMLInputElement>) => setCardIdeas(Number(e.target.value))}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => setCardIdeas(e.target.value)}
           />
         </section>
       </form>
@@ -59,4 +62,4 @@ function Card({ image = null, text = '', ideas = 0, unread = false, type = 'left
   )
 }
 
-export default Card;
+export default Card1;

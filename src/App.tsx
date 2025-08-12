@@ -8,11 +8,15 @@ import type { ICardProps } from './types'
 
 function App() {
   const initialCards: ICardProps[] = [
-    {id: 1, image: null, text: 'Lorem ipsum dolor sit amet consectetur.', ideas: 1, unread: false, type: 'left-right'},
-    {id: 2, image: 'https://placehold.jp/200x200.png', text: 'Lorem ipsum dolor sit amet consectetur.', ideas: 10, unread: true, type: 'left-right'},
-    {id: 3, image: 'https://placehold.jp/200x200.png', text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.', ideas: 1, unread: false, type: 'right-left'},
-    {id: 3, image: 'https://placehold.jp/400x300.png', text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.', ideas: 1, unread: false, type: 'top-down'},
-    {id: 4, image: 'https://placehold.jp/400x300.png', text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.', ideas: 1, unread: false, type: 'down-top'},
+    {id: 1, image: null, text: 'Drinking water isn\'t just about quenching.', ideas: '1', type: 'static'},
+    {id: 2, image: null, text: 'Drinking water isn\'t just about quenching your thirst. It plays a crucial role in about quenching bbbbbbbb', ideas: '100', type: 'static'},
+    {id: 3, image: null, text: 'Drinking water isn\'t just about quenching your thirst. It plays a crucial role in maintaining the proper functioning of your', ideas: '+10', type: 'static'},
+    {id: 4, image: null, text: 'Drinking water isn\'t just about quenching your thirst. It plays a crucial role in maintaining the proper functioning of your body, and staying properly hydrated is vital ', ideas: '0', type: 'static'},
+    {id: 5, image: 'https://i.ibb.co/tyVtMpH/a4989700c519ce886523f0185b0c77105648b279-1.jpg', text: 'quenching your thirst. It plays a cru', ideas: '10', type: 'left-right'},
+    {id: 6, image: 'https://i.ibb.co/tyVtMpH/a4989700c519ce886523f0185b0c77105648b279-1.jpg', text: 'Drinking water isn\'t just about quenching your thirst. It plays a cru bbb', ideas: '10', type: 'left-right'},
+    {id: 7, image: 'https://i.ibb.co/tyVtMpH/a4989700c519ce886523f0185b0c77105648b279-1.jpg', text: 'Drinking water isn\'t just about quenching your thirst. It plays a crucial role in  in maintaining the a bbbbbbbbb', ideas: '10', type: 'left-right'},
+    {id: 8, image: 'https://i.ibb.co/tyVtMpH/a4989700c519ce886523f0185b0c77105648b279-1.jpg', text: 'Drinking water isn\'t just about quenching your thirst. It plays a crucial role in maintaining the proper functioning of your body a bbbbbbbbb', ideas: '10', type: 'left-right'},
+
   ]
 
   const [cards, setCards] = useState<ICardProps[]>(
@@ -25,7 +29,7 @@ function App() {
     <Routes>
       <Route index element={<Home />} />
       <Route path='test-part-1' element={<TestPart1 {...{ cards, setCards }} />} />
-      <Route path='test-part-2' element={<TestPart2 />} />
+      <Route path='test-part-2' element={<TestPart2 {...{ cards, setCards }} />} />
       <Route path='test-part-3' element={<TestPart3 />} />
     </Routes>
   )

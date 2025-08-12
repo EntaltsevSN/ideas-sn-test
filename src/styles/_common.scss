@@ -10,8 +10,9 @@ body {
   background-color: #eee;
   font-family: Urbanist, sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.4;
+  color: rgba(59, 69, 82, 1);
 }
 
 figure {
@@ -20,12 +21,22 @@ figure {
 }
 
 img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
   vertical-align: bottom;
 }
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  line-height: 1;
 }
